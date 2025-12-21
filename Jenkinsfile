@@ -11,10 +11,8 @@ pipeline {
 
         stage('Deploy to Nginx') {
             steps {
-                // Copy index.html to Nginx web root
-                sh 'sudo cp nginx-site/index.html /var/www/html/'
-                
-                // Restart Nginx
+                sh 'ls -l' // optional debug
+                sh 'sudo cp index.html /var/www/html/'
                 sh 'sudo systemctl restart nginx'
             }
         }
