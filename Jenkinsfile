@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy to Nginx') {
             steps {
                 sh 'ls -l' // optional debug
-                sh 'sudo cp index.html /var/www/html/'
+                sh 'sudo cp Index.html /var/www/html/'
                 sh 'sudo systemctl restart nginx'
             }
         }
